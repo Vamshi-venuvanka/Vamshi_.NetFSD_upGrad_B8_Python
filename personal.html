@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal notes saver</title>
+        <link rel="stylesheet" href="personals.css">
+  </head>
+
+  <body onload="loadNote()">
+    <div class="container">
+        <h2> Personal Notes Saver</h2>
+       <center> <label for="notes"> <b>Enter your notes</b></label></center>
+        <textarea id="notes" rows="5" cols="30" Placeholder="Enter your information"></textarea>
+        <br>
+        <div class="button">
+       <center> <button class="save-button" onclick="savebutton()" > Save Notes</button></center>
+        <center><button class="clear-button" onclick="clearbutton()"> Clear Notes</button></center>
+        </div>
+
+    <p id="result"></p>
+     </div>
+    <br>
+    <script>
+        function savebutton(){
+            let notes=document.getElementById("notes").value;
+            if (notes===""){
+                alert("Please enter your notes");
+            }
+            else{
+                localStorage.setItem("my notes",notes);
+                result=document.getElementById("result");
+                result.innerHTML="Your notes: " + notes;
+            }
+                    }
+            function loadNote(){
+                let loadnotes=localStorage.getItem("my notes");
+                if (loadnotes){
+                    document.getElementById("result").innerHTML="Your notes: " + loadnotes;
+                }
+            }
+        function clearbutton(){
+            localStorage.removeItem("my notes");
+              document.getElementById("result").value="";
+             document.getElementById("result").innerHTML="Notes cleared.";
+        }
+    </script>
+  </body>
+  </html>
