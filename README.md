@@ -1,1 +1,33 @@
 # Vamshi_.NetFSD_upGrad_B8_Python
+
+
+
+Problem:Personal Notes Saver using LocalStorage (Level-1) 
+Scenario 
+You are building a simple web page where users can write daily notes and save them in their browser without using a server. 
+📌 Requirements 
+A textarea for writing notes. 
+A Save button (using onclick). 
+A Clear button. 
+Notes must: 
+Be stored in localStorage 
+Automatically load when the page refreshes 
+Display stored note on page load. 
+ 
+🛠️ Technical Constraints 
+Must use: 
+onclick inline event 
+localStorage.setItem() 
+localStorage.getItem() 
+localStorage.removeItem() 
+No backend/database. 
+Pure HTML + JavaScript only. 
+Data stored as key-value pair. 
+ 
+🎯 Learning Outcome 
+You should be able to: 
+Inline event handling (onclick) 
+Browser Storage APIs 
+Storing & retrieving key-value data 
+Page load event handling 
+Basic DOM manipulation
